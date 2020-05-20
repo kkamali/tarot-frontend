@@ -3,14 +3,16 @@ import './App.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 import Welcome from './components/Welcome'
+import Spreads from './components/Spreads'
 
 function App() {
   return (
-    <div className="App">
-      <Router>
-        <Route path="/" component={Welcome} />
-      </Router>
-    </div>
+    <Router>
+      <div>
+        <Route exact path="/" component={Welcome} />
+        <Route exact path="/spreads" component={Spreads} />
+      </div>
+    </Router>
   );
 }
 
