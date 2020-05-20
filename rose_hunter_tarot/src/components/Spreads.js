@@ -9,7 +9,7 @@ export const Spreads = props =>
         <Card.Body>
           <Card.Title>Classic Dragonfly</Card.Title>
           <Card.Text>
-            This 9-card spread is the traditional choice for Rosehunter defcks. It is a multi-faceted, general-use spread that digs into the details of a situation.
+            This 9-card spread is the traditional choice for Rosehunter decks. It is a multi-faceted, general-use spread that digs into the details of a situation.
           </Card.Text>
         </Card.Body>
       </Card>

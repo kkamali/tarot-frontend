@@ -12,7 +12,9 @@ export const Welcome = props =>
       <Link to="/spreads">
         <Button variant="dark">See the spreads</Button>
       </Link>
-      <Button variant="light">View the cards</Button>
+      <Link to="/deck">
+        <Button variant="light">View the cards</Button>
+      </Link>
     </Container>
   </Container>
 
