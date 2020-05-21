@@ -1,51 +1,69 @@
 import React from 'react'
-import { Container, Card } from '@material-ui/core'
+import { makeStyles, Card, CardContent, Grid, Container } from '@material-ui/core'
 
-export const Spreads = props =>
-  <Container>
-    <h1>Here are the spreads I know!</h1>
+const useStyles = makeStyles({
+  root: {
+    maxWidth: 300
+  }
+})
+
+export default function Spreads() {
+  const classes = useStyles()
+  return (
     <Container>
-      <Card>
-        <Card.Body>
-          <Card.Title>Classic Dragonfly</Card.Title>
-          <Card.Text>
-            This 9-card spread is the traditional choice for Rosehunter decks. It is a multi-faceted, general-use spread that digs into the details of a situation.
-          </Card.Text>
-        </Card.Body>
-      </Card>
-      <Card>
-        <Card.Body>
-          <Card.Title>Aunty's Advice</Card.Title>
-          <Card.Text>
-            This 3-card spread is perfect for when you're in a rush and just need a quick check-in! Much like advice from a stern but loving aunt, this spread is concise, insightful, and versatile!
-          </Card.Text>
-        </Card.Body>
-      </Card>
-      <Card>
-        <Card.Body>
-          <Card.Title>True Love</Card.Title>
-          <Card.Text>
-            This 6-card spread explores the strengths, weaknesses, and challenges of your relationships. It was designed for use in romantic contexts, but it can also be used for non-romantic relationships!
-          </Card.Text>
-        </Card.Body>
-      </Card>
-      <Card>
-        <Card.Body>
-          <Card.Title>Dreaming</Card.Title>
-          <Card.Text>
-            As the title implies, this 5-card spread helps demystify your dreams and find out what your subconsious is trying to tell you!
-          </Card.Text>
-        </Card.Body>
-      </Card>
-      <Card>
-        <Card.Body>
-          <Card.Title>Pathways</Card.Title>
-          <Card.Text>
-            As the title implies, this 5-card spread helps demystify your dreams and find out what your subconsious is trying to tell you!
-          </Card.Text>
-        </Card.Body>
-      </Card>
+      <h1>Here are the spreads I know!</h1>
+      <Grid container justify="center" spacing={2}>
+        <Grid item>
+          <Card className={classes.root}>
+            <CardContent>
+              <h2>Classic Dragonfly</h2>
+              <p>
+                This 9-card spread is the traditional choice for Rosehunter decks. It is a multi-faceted, general-use spread that digs into the details of a situation.
+                  </p>
+            </CardContent>
+          </Card>
+        </Grid>
+        <Grid item>
+          <Card className={classes.root}>
+            <CardContent>
+              <h2>Aunty's Advice</h2>
+              <p>
+                This 3-card spread is perfect for when you're in a rush and just need a quick check-in! Much like advice from a stern but loving aunt, this spread is concise, insightful, and versatile!
+                  </p>
+            </CardContent>
+          </Card>
+        </Grid>
+        <Grid item>
+          <Card className={classes.root}>
+            <CardContent>
+              <h2>True Love</h2>
+              <p>
+                This 6-card spread explores the strengths, weaknesses, and challenges of your relationships. It was designed for use in romantic contexts, but it can also be used for non-romantic relationships!
+                </p>
+            </CardContent>
+          </Card>
+        </Grid>
+        <Grid item>
+          <Card className={classes.root}>
+            <CardContent>
+              <h2>Dreaming</h2>
+              <p>
+                As the title implies, this 5-card spread helps demystify your dreams and find out what your subconsious is trying to tell you!
+              </p>
+            </CardContent>
+          </Card>
+        </Grid>
+        <Grid item>
+          <Card className={classes.root}>
+            <CardContent>
+              <h2>Pathways</h2>
+              <p>
+                As the title implies, this 5-card spread helps demystify your dreams and find out what your subconsious is trying to tell you!
+                 </p>
+            </CardContent>
+          </Card>
+        </Grid>
+      </Grid>
     </Container>
-  </Container >
-
-export default Spreads
+  )
+}
