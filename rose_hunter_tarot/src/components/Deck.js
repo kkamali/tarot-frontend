@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Container } from 'react-bootstrap'
 
+import TarotCard from './TarotCard'
+
 class Deck extends Component {
   state = {
     tarotCards: []
@@ -19,7 +21,7 @@ class Deck extends Component {
   render() {
     return (
       <Container>
-        {this.state.tarotCards.map(card => card.name)}
+        {this.state.tarotCards.map(card => <TarotCard name={card.name} img_link={card.img} upright={card.upright} reversed={card.reversed} />)}
       </Container>
     )
   }
