@@ -1,22 +1,26 @@
 import React from 'react'
-import { Card } from 'react-bootstrap'
+import { makeStyles, Card, CardMedia, CardContent } from '@material-ui/core'
 
-export const TarotCard = props =>
-  <Card style={{ width: '15rem' }}>
-    <Card.Img variant="top" src={require(`../../public/${props.img_link}`)} />
-    <Card.Body>
-      <Card.Title>
-        {props.name}
-      </Card.Title>
-      <Card.Text>
+const useStyles = makeStyles((theme) => ({
+  root: {
+    maxWidth: 300
+  },
+}))
+
+export default function TarotCard(props) {
+  const classes = useStyles();
+  return (
+    <Card className={classes.root}>
+      <CardMedia component="img" image={require(`../../public/${props.img_link}`)} />
+      <CardContent>
+        <h1>{props.name}</h1>
         <p>
           <em>Upright: </em>{props.upright}
         </p>
         <p>
           <em>Reversed: </em>{props.reversed}
         </p>
-      </Card.Text>
-    </Card.Body>
-  </Card>
-
-export default TarotCard
+      </CardContent>
+    </Card>
+  )
+}

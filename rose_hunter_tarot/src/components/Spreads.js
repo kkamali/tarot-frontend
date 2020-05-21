@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Card } from 'react-bootstrap'
+import { Container, Card } from '@material-ui/core'
 
 export const Spreads = props =>
   <Container>

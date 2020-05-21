@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Container } from 'react-bootstrap'
+import { Container } from '@material-ui/core'
 
 import TarotCard from './TarotCard'
 
