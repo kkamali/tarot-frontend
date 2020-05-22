@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Grid, Button, Container } from '@material-ui/core'
+import { Grid, Button } from '@material-ui/core'
 import { Link } from 'react-router-dom'
 
 import TarotCard from './TarotCard'
