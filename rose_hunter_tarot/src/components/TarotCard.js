@@ -1,7 +1,7 @@
 import React from 'react'
 import { makeStyles, Card, CardMedia, CardContent } from '@material-ui/core'
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   root: {
     maxWidth: 300
   },
@@ -11,7 +11,7 @@ export default function TarotCard(props) {
   const classes = useStyles();
   return (
     <Card className={classes.root}>
-      <CardMedia component="img" image={require(`../../public/${props.img_link}`)} />
+      <CardMedia component="img" image={require(`../../public/${props.img}`)} />
       <CardContent>
         <h1>{props.name}</h1>
         <p>
