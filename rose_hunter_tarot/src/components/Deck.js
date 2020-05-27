@@ -1,45 +1,44 @@
-import React, { Component } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Grid, Button } from '@material-ui/core'
 import { Link } from 'react-router-dom'
 
 import TarotCard from './TarotCard'
 
-class Deck extends Component {
-  state = {
-    tarotCards: []
+export default function Deck() {
+  const [deck, setDeck] = useState([])
+  const [loading, setLoading] = useState(true)
+
+  async function fetchDeck() {
+    const response = await fetch('http://localhost:3000/cards')
+    const json = await response.json()
+
+    setDeck(json)
+    setLoading(false)
   }
 
-  componentDidMount() {
-    fetch('http://localhost:3000/cards')
-      .then(response => response.json())
-      .then(data => {
-        this.setState({
-          tarotCards: data
-        })
-      })
-  }
+  useEffect(() => {
+    fetchDeck()
+  }, [])
 
-  render() {
-    return (
-      <div>
-        <Link to="/spreads">
-          <Button style={{ margin: 20 }} variant="contained" color="primary">
-            Pick a spread
+  return (
+    <div>
+      <Link to="/spreads">
+        <Button style={{ margin: 20 }} variant="contained" color="primary">
+          Pick a spread
           </Button>
-        </Link>
-        <Grid container style={{ flexGrow: 1 }} spacing={2}>
-          <Grid item xs={this.state.tarotCards.length}>
-            <Grid container justify="center" spacing={2}>
-              {this.state.tarotCards.map((card) => (
-                <Grid key={card} item>
-                  <TarotCard name={card.name} img_link={card.img} upright={card.upright} reversed={card.reversed} />
-                </Grid>
-              ))}
-            </Grid>
+      </Link>
+      <h3>Mouse over a card to read about its meanings</h3>
+      <Grid container style={{ flexGrow: 1 }} spacing={2}>
+        <Grid item xs={deck.length}>
+          <Grid container justify="center" spacing={2}>
+            {deck.map((card) => (
+              <Grid key={card} item>
+                <TarotCard name={card.name} img_link={card.img} upright={card.upright} reversed={card.reversed} />
+              </Grid>
+            ))}
           </Grid>
         </Grid>
-      </div >
-    )
-  }
+      </Grid>
+    </div >
+  )
 }
-export default Deck

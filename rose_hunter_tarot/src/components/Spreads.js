@@ -12,6 +12,11 @@ export default function Spreads() {
   const classes = useStyles()
   return (
     <Container>
+      <Link to="/deck">
+        <Button style={{ margin: 20 }} variant="contained" color="primary">
+          See all the cards
+        </Button>
+      </Link>
       <h1>Here are the spreads I know!</h1>
       <Grid container justify="center" spacing={2}>
         <Grid item>
@@ -36,6 +41,11 @@ export default function Spreads() {
               <p>
                 This 3-card spread is perfect for when you're in a rush and just need a quick check-in! Much like advice from a stern but loving aunt, this spread is concise, insightful, and versatile!
               </p>
+              <Link to="/advice">
+                <Button>
+                  Read for me!
+                </Button>
+              </Link>
             </CardContent>
           </Card>
         </Grid>

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Drawn from './Drawn'
-import { Grid, Container } from '@material-ui/core'
+import { Grid } from '@material-ui/core'
+import ReadingFooter from './ReadingFooter'
 
 export default function Dragonfly() {
   const [drawn, setDrawn] = useState([])
@@ -60,6 +61,7 @@ export default function Dragonfly() {
           </div>
         )
       }
+      <ReadingFooter />
     </>
   )
 }
