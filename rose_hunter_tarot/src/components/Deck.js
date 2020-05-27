@@ -9,7 +9,7 @@ export default function Deck() {
   const [loading, setLoading] = useState(true)
 
   async function fetchDeck() {
-    const response = await fetch('http://localhost:3000/cards')
+    const response = await fetch('https://rose-hunter-tarot-backend.herokuapp.com/cards')
     const json = await response.json()
 
     setDeck(json)
