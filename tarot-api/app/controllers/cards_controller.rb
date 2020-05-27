@@ -46,6 +46,7 @@ class CardsController < ApplicationController
     while drawn.length < cards_needed
       card = draw_card()
       if !drawn.include? card
+        card.is_reversed = [true,false].sample
         drawn << card
       end
     end

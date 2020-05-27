@@ -13,7 +13,10 @@ export default function Drawn(props) {
     <Flippy flipOnHover={true} flipDirection="horizontal" style={{ width: '300px' }}>
       <FrontSide>
         <Card style={styles.root}>
-          <CardMedia component="img" image={require(`../../public/${props.card.img}`)} />
+          {props.card.is_reversed
+            ? <CardMedia component="img" image={require(`../../public/${props.card.img}`)} style={{ transform: "rotate(180deg)" }} />
+            : <CardMedia component="img" image={require(`../../public/${props.card.img}`)} />
+          }
           <p>mouse over for meaning</p>
         </Card>
       </FrontSide>
@@ -21,7 +24,10 @@ export default function Drawn(props) {
         <CardContent>
           <h2>{props.spread_pos}</h2>
           <h4>{props.spread_meaning}</h4>
-          <p>{props.card.upright}</p>
+          {props.card.is_reversed
+            ? <p><em>Reversed: </em>{props.card.reversed}</p>
+            : <p><em>Upright: </em>{props.card.upright}</p>
+          }
         </CardContent>
       </BackSide>
     </Flippy >

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_09_155801) do
+ActiveRecord::Schema.define(version: 2020_05_27_151544) do
 
   create_table "cards", force: :cascade do |t|
     t.string "name"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2020_05_09_155801) do
     t.datetime "updated_at", null: false
     t.string "upright"
     t.string "reversed"
+    t.boolean "is_reversed"
   end
 
 end
