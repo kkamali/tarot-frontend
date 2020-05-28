@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Drawn from './Drawn'
 import { Grid } from '@material-ui/core'
+import ReadingFooter from './ReadingFooter'
 
 export default function Pathways() {
   const [drawn, setDrawn] = useState([])
@@ -24,36 +25,39 @@ export default function Pathways() {
       {loading ? (
         "Reading the cards..."
       ) : (
-          <Grid container justify="center">
+          <div>
             <Grid container justify="center">
-              <Grid item>
-                <Drawn card={drawn[0]} spread_pos="Currently" spread_meaning="The path you're on now" />
+              <Grid container justify="center">
+                <Grid item>
+                  <Drawn card={drawn[0]} spread_pos="Currently" spread_meaning="The path you're on now" />
+                </Grid>
+                <Grid item>
+                  <Drawn card={drawn[1]} spread_pos="Benefits" spread_meaning="Upsides to staying the course" />
+                </Grid>
+                <Grid item>
+                  <Drawn card={drawn[2]} spread_pos="Drawbacks" spread_meaning="Disadvantages to staying the course" />
+                </Grid>
+                <Grid item>
+                  <Drawn card={drawn[3]} spread_pos="Outcome" spread_meaning="Eventual result of staying the course" />
+                </Grid>
               </Grid>
-              <Grid item>
-                <Drawn card={drawn[1]} spread_pos="Benefits" spread_meaning="Upsides to staying the course" />
-              </Grid>
-              <Grid item>
-                <Drawn card={drawn[2]} spread_pos="Drawbacks" spread_meaning="Disadvantages to staying the course" />
-              </Grid>
-              <Grid item>
-                <Drawn card={drawn[3]} spread_pos="Outcome" spread_meaning="Eventual result of staying the course" />
+              <Grid container justify="center">
+                <Grid item>
+                  <Drawn card={drawn[4]} spread_meaning="The path you could choose" spread_pos="Change" />
+                </Grid>
+                <Grid item>
+                  <Drawn card={drawn[5]} spread_pos="Benefits" spread_meaning="Upsides to changing your course" />
+                </Grid>
+                <Grid item>
+                  <Drawn card={drawn[6]} spread_pos="Disadvantages to changing your course" />
+                </Grid>
+                <Grid item>
+                  <Drawn card={drawn[7]} spread_meaning="Eventual result of changing your course" />
+                </Grid>
               </Grid>
             </Grid>
-            <Grid container justify="center">
-              <Grid item>
-                <Drawn card={drawn[4]} spread_meaning="The path you could choose" spread_pos="Change" />
-              </Grid>
-              <Grid item>
-                <Drawn card={drawn[5]} spread_pos="Benefits" spread_meaning="Upsides to changing your course" />
-              </Grid>
-              <Grid item>
-                <Drawn card={drawn[6]} spread_pos="Disadvantages to changing your course" />
-              </Grid>
-              <Grid item>
-                <Drawn card={drawn[7]} spread_meaning="Eventual result of changing your course" />
-              </Grid>
-            </Grid>
-          </Grid>
+            <ReadingFooter />
+          </div>
         )}
     </>
   )
