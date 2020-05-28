@@ -20,7 +20,7 @@
     "react-scripts": "3.4.1"
   },
   "scripts": {
-    "build": "npm start && cd ..",
+    "build": "cd rose_hunter_tarot && npm start",
     "deploy": "cp -a rose_hunter_tarot/build/. public/"
   },
   "eslintConfig": {
