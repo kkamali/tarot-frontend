@@ -20,8 +20,8 @@
     "react-scripts": "3.4.1"
   },
   "scripts": {
-    "heroku-prebuild": "cd tarot-api && bundle install && rails s && cd .. && cd rose_hunter_tarot && npm install && cd ..",
-    "start": "npm start"
+    "build": "npm start",
+    "deploy": "cp -a rose_hunter_tarot/build/. public/"
   },
   "eslintConfig": {
     "extends": "react-app"
