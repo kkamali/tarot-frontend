@@ -20,9 +20,8 @@
     "react-scripts": "3.4.1"
   },
   "scripts": {
-    "build": "cd rose_hunter_tarot && yarn install && yarn build && cd ..",
-    "deploy": "cp -a rose_hunter_tarot/build/. public/",
-    "postinstall": "yarn build && yarn deploy && echo 'Client built!'"
+    "build": "cd rose_hunter_tarot && npm install && npm start && cd ..",
+    "deploy": "cp -a rose_hunter_tarot/build/. public/"
   },
   "eslintConfig": {
     "extends": "react-app"
