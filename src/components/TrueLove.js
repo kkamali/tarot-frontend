@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Drawn from './Drawn'
 import { Grid } from '@material-ui/core'
 import ReadingFooter from './ReadingFooter'
@@ -42,7 +42,7 @@ export default function TrueLove() {
                   <Drawn card={drawn[3]} spread_pos="Strengths" spread_meaning="What maintains your relationship" />
                 </Grid>
                 <Grid item>
-                  <Drawn card={dranw[4]} spread_pos="Weaknesses" spread_meaning="Issues that need exploration" />
+                  <Drawn card={drawn[4]} spread_pos="Weaknesses" spread_meaning="Issues that need exploration" />
                 </Grid>
               </Grid>
               <Grid container justify="center">
