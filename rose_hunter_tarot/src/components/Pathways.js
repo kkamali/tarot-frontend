@@ -7,7 +7,7 @@ export default function Pathways() {
   const [loading, setLoading] = useState(true)
 
   async function fetchCards() {
-    const response = await fetch('https://rose-hunter-tarot-backend.herokuapp.com/spreads/pathways')
+    const response = await fetch('/spreads/pathways')
     const json = await response.json()
 
     setDrawn(json)

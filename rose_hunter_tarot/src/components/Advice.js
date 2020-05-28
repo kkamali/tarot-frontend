@@ -8,7 +8,7 @@ export default function Advice() {
   const [loading, setLoading] = useState(true)
 
   async function fetchCards() {
-    const response = await fetch('https://rose-hunter-tarot-backend.herokuapp.com/spreads/advice')
+    const response = await fetch('/spreads/advice')
     const json = await response.json()
 
     setDrawn(json)

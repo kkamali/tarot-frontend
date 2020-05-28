@@ -8,7 +8,7 @@ export default function Dragonfly() {
   const [loading, setLoading] = useState(true)
 
   async function fetchCards() {
-    const response = await fetch('https://rose-hunter-tarot-backend.herokuapp.com/spreads/dragonfly')
+    const response = await fetch('/spreads/dragonfly')
     const json = await response.json()
 
     setDrawn(json)
