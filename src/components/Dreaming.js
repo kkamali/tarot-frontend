@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Grid } from '@material-ui/core'
 import ReadingFooter from './ReadingFooter'
+import Drawn from './Drawn'
 
 export default function Dreaming() {
   const [drawn, setDrawn] = useState([])
