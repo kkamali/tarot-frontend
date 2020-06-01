@@ -8,6 +8,7 @@ import Dragonfly from './components/Dragonfly'
 import Advice from './components/Advice'
 import TrueLove from './components/TrueLove'
 import Dreaming from './components/Dreaming'
+import Pathways from './components/Pathways'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route exact path="/advice" component={Advice} />
         <Route exact path="/love" component={TrueLove} />
         <Route exact path="/dreaming" component={Dreaming} />
+        <Route exact path="/pathways" component={Pathways} />
       </div>
     </Router>
   );

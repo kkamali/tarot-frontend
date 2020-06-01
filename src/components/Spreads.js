@@ -56,6 +56,11 @@ export default function Spreads() {
               <p>
                 This 6-card spread explores the strengths, weaknesses, and challenges of your relationships. It was designed for use in romantic contexts, but it can also be used for non-romantic relationships!
               </p>
+              <Link to="/love">
+                <Button>
+                  Read for me!
+                </Button>
+              </Link>
             </CardContent>
           </Card>
         </Grid>
@@ -66,6 +71,11 @@ export default function Spreads() {
               <p>
                 As the title implies, this 5-card spread helps demystify your dreams and find out what your subconsious is trying to tell you!
               </p>
+              <Link to="/dreaming">
+                <Button>
+                  Read for me!
+                </Button>
+              </Link>
             </CardContent>
           </Card>
         </Grid>
@@ -74,8 +84,13 @@ export default function Spreads() {
             <CardContent>
               <h2>Pathways</h2>
               <p>
-                As the title implies, this 5-card spread helps demystify your dreams and find out what your subconsious is trying to tell you!
+                This 8-card spread is used to find clarity when you are faced with a dichotomous decision. It explores the pros and cons of each option and helps you see the full picture.
               </p>
+              <Link to="/pathways">
+                <Button>
+                  Read for me!
+                </Button>
+              </Link>
             </CardContent>
           </Card>
         </Grid>
